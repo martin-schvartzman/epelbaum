@@ -1,0 +1,194 @@
+<style>
+	input{
+		width:100%;
+	}
+</style>
+
+<h1>
+</h1>
+<form method="POST">
+<div class="container">
+<div class="row-fluid">
+<div class="col-sm-10">
+<table style="width:100%;">
+	<tbody>
+		<tr>
+			<td><h2>Mediacion</h2></td>
+			<td>Carpeta Siniestro:</td>
+			<td><input type="number" name="mediacion_carpeta_siniestro" value="<%= typeof mediacion_carpeta_siniestro !== 'undefined' ? mediacion_carpeta_siniestro : '' %>"/></td>
+			<td></td>
+			<td>Fecha Alta:</td>
+			<td><input type="date" name="mediacion_fecha_alta" value="<%= typeof mediacion_fecha_alta !== 'undefined' ? mediacion_fecha_alta : '' %>"/></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>Carpeta Mediacion:</td>
+			<td><input type="number" name="mediacion_carpeta_mediacion" value="<%= typeof mediacion_carpeta_mediacion !== 'undefined' ? mediacion_carpeta_mediacion : '' %>"/></td>
+			<td></td>
+			<td>Fecha Recepcion:</td>
+			<td><input type="date" name="mediacion_fecha_recepcion"  value="<%= typeof mediacion_fecha_recepcion !== 'undefined' ? mediacion_fecha_recepcion : '' %>"/></td>
+		</tr>
+	</tbody>
+</table>
+<table style="width:100%;border:1px solid black;margin-top:10px;">
+	<tbody>
+		<tr>
+		<td><h2>Cliente</h2></td><td colspan="5"></td>
+		</tr>
+		<tr>
+			<td>Apellido y Nombre</td>
+			<td colspan="3"><input type="text" style="width:100%;" name="cliente_nombre_completo" value="<%= typeof cliente_nombre_completo !== 'undefined' ? cliente_nombre_completo : '' %>"/></td>
+			
+			<td>Productor:</td>
+			<td><input type="text" name="cliente_productor"  value="<%= typeof cliente_productor !== 'undefined' ? cliente_productor : '' %>"/></td>
+		</tr>
+		<tr>
+			<td>Telefono</td>
+			<td colspan="3"><input type="text" name="cliente_telefono" value="<%= typeof cliente_telefono !== 'undefined' ? cliente_telefono : '' %>"/></td>
+			
+			<td>Fecha Siniestro:</td>
+			<td><input type="date" name="cliente_fecha_siniestro" value="<%= typeof cliente_fecha_siniestro !== 'undefined' ? cliente_fecha_siniestro : '' %>"/></td>
+		</tr>
+		<tr>
+			<td>Patente:</td>
+			<td><input type="text" name="cliente_patente" value="<%= typeof cliente_patente !== 'undefined' ? cliente_patente : '' %>"/></td>
+			<td>Marca:</td>
+			<td><input type="text" name="cliente_marca" value="<%= typeof cliente_marca !== 'undefined' ? cliente_marca : '' %>"/></td>
+			<td>Presupuesto</td>
+			<td><input type="text" name="cliente_presupuesto" value="<%= typeof cliente_presupuesto !== 'undefined' ? cliente_presupuesto : '' %>"/></td>
+		</tr>
+		<tr>
+			<td>Asegurado</td>
+			<td colspan="3"><input type="text" name="cliente_asegurado" value="<%= typeof cliente_asegurado !== 'undefined' ? cliente_asegurado : '' %>"/></td>
+			
+			<td>Franquicia:</td>
+			<td><input type="text" name="cliente_franquicia" value="<%= typeof cliente_franquicia !== 'undefined' ? cliente_franquicia : '' %>"/></td>
+		</tr>
+		<tr>
+			<td>Lesiones:</td>
+			<td><select name="cliente_lesiones">
+                <%= typeof cliente_lesiones !== 'undefined' ? '' : '' %>
+			    <option>SI</option>
+			    <option>NO</option>
+			</select></td>
+			<td>Lesionado</td>
+			<td colspan="3"><input type="text" name="cliente_lesionado" value="<%= typeof cliente_lesionado !== 'undefined' ? cliente_lesionado : '' %>"/></td>
+		</tr>
+	</tbody>
+</table>
+
+
+<table style="width:100%;border:1px solid black;margin-top:10px;">
+	<tbody>
+		<tr>
+		<td><h2>Terceros</h2></td><td colspan="5"></td>
+		</tr>
+		<tr>
+			<td>Apellido y Nombre</td>
+			<td colspan="3"><input type="text" name="terceros_nombre_completo" value="<%= typeof terceros_nombre_completo !== 'undefined' ? terceros_nombre_completo : '' %>"/></td>
+			
+			<td>Siniestro:</td>
+			<td><input type="text" name="terceros_siniestro"  value="<%= typeof terceros_siniestro!== 'undefined' ? terceros_siniestro : '' %>"/></td>
+		</tr>
+		<tr>
+			<td>Domicilio</td>
+			<td colspan="3"><input type="text" name="terceros_domicilio" value="<%= typeof terceros_domicilio !== 'undefined' ? terceros_domicilio : '' %>"/></td>
+			
+			<td>Telefono:</td>
+			<td><input type="text" name="terceros_telefono" value="<%= typeof terceros_telefono !== 'undefined' ? terceros_telefono : '' %>"/></td>
+		</tr>
+		<tr>
+			<td>Dni</td>
+			<td colspan="3"><input type="text" name="terceros_dni" value="<%= typeof terceros_dni!== 'undefined' ? terceros_dni : '' %>"/></td>
+			
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Seguro:</td>
+			<td><input type="text" name="terceros_seguro" value="<%= typeof terceros_seguro !== 'undefined' ? terceros_seguro : '' %>"/></td>
+			<td>Poliza:</td>
+			<td><input type="text" name="terceros_poliza" value="<%= typeof terceros_poliza !== 'undefined' ? terceros_poliza : '' %>"/></td>
+			<td>Notificacion</td>
+			<td><input type="text" name="terceros_notificacion" value="<%= typeof terceros_notificacion !== 'undefined' ? terceros_notificacion : '' %>"/></td>
+		</tr>
+		<tr>
+			<td>Patente:</td>
+			<td><input type="text" name="terceros_patente" value="<%= typeof terceros_patente !== 'undefined' ? terceros_patente : '' %>"/></td>
+			<td>Marca:</td>
+			<td><input type="text" name="terceros_marca" value="<%= typeof terceros_marca !== 'undefined' ? terceros_marca : '' %>"/></td>
+			<td>Cita al 3ro</td>
+			<td><select name="terceros_cita">
+			<option>SI</option>
+			<option>NO</option>
+			</select></td>
+		</tr>
+	</tbody>
+</table>
+
+<table style="width:100%;margin-top:10px;">
+	<tbody>
+		<tr>
+			<td>Fecha Audiencia:</td>
+			<td><input type="date" name="adicionales_fecha_audiencia" value="<%= typeof adicionales_fecha_audiencia !== 'undefined' ? adicionales_fecha_audiencia : '' %>"/></td>
+			<td>Horario:</td>
+			<td><input type="text" name="adicionales_horario" value="<%= typeof adicionales_horario !== 'undefined' ? adicionales_horario : '' %>"/></td>
+			<td>Se avisa:</td>
+			<td><select name="adicionales_se_avisa">
+            <%= typeof adicionales_se_avisa !== 'undefined' ? '' : '' %>
+			<option>SI</option>
+			<option>NO</option>
+			</select></td>
+		</tr>
+		<tr>
+			<td colspan="6">
+			Observaciones:<br/>
+			<textarea name="adicionales_observaciones" style="width:100%;height:100px;"><%= typeof adicionales_observaciones !== 'undefined' ? adicionales_observaciones : '' %></textarea>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<input type="submit" value="Guardar Ficha" style="margin-bottom:30px;"/>
+
+</div>
+</div>
+</div>
+</form>
+
+<% if(typeof _id !== 'undefined'){ %>
+
+<a href="/delete/<%= _id %>">eliminar ficha</a>
+
+<h3> <a href="/print/caso<%= _id %>">Imprimir ficha</a></h3>
+<h3> <a href="/print/caratula/<%= _id %>">Imprimir caratula</a></h3>
+<div class="container">
+<div class="row-fluid">
+<div class="col-sm-10">
+<table style="width:100%;">
+	<tr>
+		<th style="width:30%;">Fecha</th>
+		<th style="width:60%;">Comentario</th>
+		<th></th>
+	</tr>
+	<% comments.forEach(comment => { %>
+	<tr>
+		<td><%= comment.fecha %></td>
+		<td><%= comment.texto %></td>
+		<td></td>
+	</tr>
+	<% }); %>
+</table>
+<form action="/comment/<%= _id %>" method="POST">
+	<table style="width:100%;">
+	<tr>
+		<td style="width:100px;">Fecha<br/><input type="date"  name="fecha" value=""/></td>
+		<td colspan="7">Comentario<br/><textarea name="texto" style="width:100%;height:50px;"></textarea></td>
+		<td><input type="submit" value="Ingresar"/></td>
+	</tr>
+	</table>
+</form>
+</div>
+</div>
+</div>
+
+<% } %>

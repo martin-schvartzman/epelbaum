@@ -1,0 +1,13 @@
+Usuarios:<br/>
+<% for(index in users){ %>
+    <% const user = users[index] %>
+    <%= user.username %>
+    <a href="/user/delete/<%= user._id %>">Eliminar</a>
+    <br/>
+<% } %>
+<br/>
+<form method="POST" action="/user">
+    <input type="text" placeholder="username" name="username" />
+    <input type="password" placeholder="password" name="password" />
+    <input type="submit" />
+</form>
